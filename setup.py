@@ -2,6 +2,11 @@
 from __future__ import with_statement
 
 import os.path
+import io
+import sys
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 
 try:
     from setuptools import setup
